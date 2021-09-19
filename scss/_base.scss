@@ -4,9 +4,17 @@ html {
   
   body {
     font-family: var(--font-family);
-    color: var(--text);
     font-size: 1.6rem;
   }
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
+}
  
   ul {
     list-style: none;

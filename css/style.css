@@ -10,8 +10,16 @@ html {
 
 body {
   font-family: var(--font-family);
-  color: var(--text);
   font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
 }
 
 ul {
@@ -28,14 +36,17 @@ img {
 }
 
 :root {
-  --font-family: "Mulish", sans-serif;
-  --light: #00c3ff;
-  --primary: #2071e7;
-  --dark: #2980b9;
-  --text: #333;
-  --background: #fafafa;
+  --font-family: "Roboto", sans-serif;
+  --title: "Shrikhand", sans-serif;
+  --primary: #9356DC;
+  --secondary: #FF79DA;
+  --tertiary: #99E2D0;
   --hint: #999;
   --border: #ddd;
+  --background: #f2f2f2;
+  --border-light: #999;
+  --shadow: 0px 0px 5px var(--border-light);
+  --light: #deebff;
 }
 
 /*# sourceMappingURL=style.css.map */
