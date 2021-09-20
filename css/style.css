@@ -9,17 +9,12 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--title);
+h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 ul {
@@ -35,18 +30,64 @@ img {
   max-width: 100%;
 }
 
-:root {
-  --font-family: "Roboto", sans-serif;
-  --title: "Shrikhand", sans-serif;
-  --primary: #9356DC;
-  --secondary: #FF79DA;
-  --tertiary: #99E2D0;
-  --hint: #999;
-  --border: #ddd;
-  --background: #f2f2f2;
-  --border-light: #999;
-  --shadow: 0px 0px 5px var(--border-light);
-  --light: #deebff;
+header {
+  box-shadow: 0px 0px 8px #999;
+  position: relative;
+}
+header h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.localisation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e0e0;
+  padding: 2rem;
+}
+.localisation__icone {
+  font-size: 2rem;
+}
+.localisation__input {
+  border: none;
+  text-align: center;
+  background-color: #e4e0e0;
+  font-size: 1.6rem;
+  width: 15rem;
+}
+.localisation__input::placeholder {
+  font-weight: bold;
+  color: black;
+}
+
+.proposition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 2rem 0rem;
+}
+.proposition__h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.proposition__text {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666464;
+  font-size: 1.8rem;
+}
+.proposition__button {
+  margin: 3rem;
+  width: 22rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 2rem;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  box-shadow: 0px 4px 5px #999;
 }
 
 /*# sourceMappingURL=style.css.map */

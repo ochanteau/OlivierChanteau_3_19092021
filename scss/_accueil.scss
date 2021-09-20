@@ -1,0 +1,70 @@
+@import "variables";
+
+// HEADER
+header {
+  box-shadow: 0px 0px 8px $hint;
+  position: relative;
+  h1 {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+// MAIN
+
+// Localisation
+
+.localisation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $localisation;
+  padding: 2rem;
+  &__form {
+  }
+  &__icone {
+    font-size: 2rem;
+  }
+  &__input {
+    border: none;
+    text-align: center;
+    background-color: $localisation;
+    font-size: 1.6rem;
+    width: 15rem;
+    &::placeholder {
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+
+// proposition
+
+.proposition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $proposition;
+  padding: 2rem 0rem;
+  &__h2 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  &__text {
+    text-align: center;
+    margin-top: 2rem;
+    color: $proposition_text;
+    font-size: 1.8rem;
+  }
+  &__button {
+    margin: 3rem;
+    width: 22rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    box-shadow: 0px 4px 5px $hint;
+  }
+}
