@@ -84,10 +84,18 @@ header h1 {
   width: 22rem;
   height: 5rem;
   font-size: 1.6rem;
+  text-align: center;
+  padding: 1.5rem;
   color: white;
   border-radius: 2rem;
+  border: none;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  box-shadow: 0px 4px 5px #999;
+  box-shadow: 5px 5px 10px #999;
+}
+.proposition__button:hover {
+  box-shadow: 5px 5px 8px gray;
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  transition: 0.25s;
 }
 
 /*# sourceMappingURL=style.css.map */
