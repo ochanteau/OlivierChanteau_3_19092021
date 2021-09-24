@@ -153,4 +153,53 @@ header h1 {
   background: linear-gradient(to bottom right, #ff88de, #9b63df);
 }
 
+.process {
+  margin: 5rem 0;
+}
+.process__h2 {
+  margin: 2rem 1.5rem;
+}
+.process__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  counter-reset: step;
+}
+.process__step {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #f2f2f2;
+  width: 33rem;
+  height: 8rem;
+  border-radius: 2rem;
+  align-items: center;
+  margin: 1rem 0;
+  box-shadow: 8px 8px 10px #ddd;
+}
+.process__step::before {
+  counter-increment: step;
+  content: counter(step) "";
+  color: white;
+  font-size: 1.4rem;
+  background-color: #9356dc;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50%;
+  position: relative;
+  right: 1rem;
+}
+.process__step:hover {
+  background-color: #f2eafb;
+}
+.process__step:hover i {
+  color: #9356dc;
+}
+.process__text {
+  font-weight: bold;
+}
+.process__icone {
+  color: #666464;
+  margin: 0 2rem;
+  font-size: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */

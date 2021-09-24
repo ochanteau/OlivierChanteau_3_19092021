@@ -85,6 +85,7 @@ header {
   align-items: center;
   background-color: $proposition;
   padding: 2rem 0rem;
+
   &__h2 {
     text-align: center;
     margin-top: 2rem;
@@ -116,5 +117,58 @@ header {
         $primary-light
       );
     }
+  }
+}
+
+// process
+
+.process {
+  margin: 5rem 0;
+  &__h2 {
+    margin: 2rem 1.5rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    counter-reset: step;
+  }
+  &__step {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: $proposition;
+    width: 33rem;
+    height: 8rem;
+    border-radius: 2rem;
+    align-items: center;
+    margin: 1rem 0;
+    box-shadow: $shadow;
+    &::before {
+      counter-increment: step;
+      content: counter(step) "";
+      color: white;
+      font-size: 1.4rem;
+      background-color: $primary;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50%;
+      position: relative;
+      right: 1rem;
+    }
+    &:hover {
+      background-color: $primary-verylight;
+    }
+    &:hover i {
+      color: $primary;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__icone {
+    color: $proposition_text;
+    margin: 0 2rem;
+    font-size: 2rem;
   }
 }
