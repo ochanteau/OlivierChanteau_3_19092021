@@ -1,4 +1,42 @@
-@import "variables";
+// LOADER
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  background-color: white;
+  opacity: 0.9;
+
+  font-size: 5rem;
+  text-align: center;
+  justify-content: center;
+  padding: 30rem;
+  animation: load 3s;
+  animation-delay: 100ms;
+  color: $primary;
+
+  &__text {
+    color: $primary;
+  }
+  &__title {
+    font-family: $title;
+    color: black;
+  }
+}
+
+.loader::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms 3;
+  animation: ellipsis steps(4, end) 900ms 3;
+  content: "\2026";
+  width: 0px;
+  color: $secondary;
+}
 
 // HEADER
 header {
@@ -21,8 +59,8 @@ header {
   align-items: center;
   background-color: $localisation;
   padding: 2rem;
-  &__form {
-  }
+  // &__form {
+  // }
   &__icone {
     font-size: 2rem;
   }
@@ -69,6 +107,7 @@ header {
     border: none;
     background: linear-gradient(to bottom right, $secondary, $primary);
     box-shadow: 5px 5px 10px $hint;
+
     &:hover {
       box-shadow: 5px 5px 8px darken($hint, 10%);
       background: linear-gradient(
@@ -76,7 +115,6 @@ header {
         $secondary-light,
         $primary-light
       );
-      transition: 0.25s;
     }
   }
 }
