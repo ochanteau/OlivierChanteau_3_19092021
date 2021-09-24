@@ -1,3 +1,4 @@
+// LOADER
 @keyframes ellipsis {
   to {
     width: 1em;
@@ -22,6 +23,41 @@
 
   100% {
     z-index: -2;
+    opacity: 0;
+  }
+}
+
+// HEART
+@keyframes heart2 {
+  0% {
+    transform: scale(0);
+    z-index: 1;
+  }
+
+  25% {
+    transform: scale(0.25);
+    z-index: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    z-index: 1;
+  }
+  75% {
+    transform: scale(0.75);
+    z-index: 1;
+  }
+  100% {
+    transform: scale(1);
+    z-index: 1;
+  }
+}
+
+@keyframes heart1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
     opacity: 0;
   }
 }

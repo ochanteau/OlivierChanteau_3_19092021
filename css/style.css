@@ -54,6 +54,36 @@ img {
     opacity: 0;
   }
 }
+@keyframes heart2 {
+  0% {
+    transform: scale(0);
+    z-index: 1;
+  }
+  25% {
+    transform: scale(0.25);
+    z-index: 1;
+  }
+  50% {
+    transform: scale(0.5);
+    z-index: 1;
+  }
+  75% {
+    transform: scale(0.75);
+    z-index: 1;
+  }
+  100% {
+    transform: scale(1);
+    z-index: 1;
+  }
+}
+@keyframes heart1 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .loader {
   position: absolute;
   top: 0;
@@ -214,6 +244,60 @@ main {
   color: #666464;
   margin: 0 2rem;
   font-size: 2rem;
+}
+
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+}
+.restaurant__card {
+  margin: 0 2rem;
+  border-radius: 2rem;
+  height: 26rem;
+  box-shadow: 8px 8px 10px #ddd;
+}
+.restaurant__img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.restaurant__description {
+  margin: 1rem 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant__text {
+  line-height: 2.5rem;
+}
+.restaurant__heart {
+  background-color: white;
+  position: relative;
+  padding: 0 1rem;
+}
+.restaurant__heart:hover .restaurant__heart--one {
+  animation: heart1 forwards 100ms 1;
+  animation-delay: 250ms;
+}
+.restaurant__heart:hover .restaurant__heart--two {
+  animation: heart2 forwards 300ms 1;
+}
+.restaurant__heart--one {
+  font-size: 2.5rem;
+}
+.restaurant__heart--two {
+  background: -webkit-linear-gradient(top, #ff79da 30%, #9356dc 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+  z-index: -1;
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

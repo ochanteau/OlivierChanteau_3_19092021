@@ -179,3 +179,61 @@ main {
     font-size: 2rem;
   }
 }
+
+// restaurant
+
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  &__card {
+    margin: 0 2rem;
+    border-radius: 2rem;
+    height: 26rem;
+    box-shadow: $shadow;
+  }
+  &__img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
+  &__description {
+    margin: 1rem 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    line-height: 2.5rem;
+  }
+  &__heart {
+    // z-index: -2;
+    background-color: white;
+    position: relative;
+    padding: 0 1rem;
+    &:hover .restaurant__heart--one {
+      animation: heart1 forwards 100ms 1;
+      animation-delay: 250ms;
+    }
+    &:hover .restaurant__heart--two {
+      animation: heart2 forwards 300ms 1;
+    }
+    &--one {
+      font-size: 2.5rem;
+    }
+    &--two {
+      background: -webkit-linear-gradient(top, #ff79da 30%, #9356dc 70%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 2rem;
+      position: absolute;
+      left: 1rem;
+
+      z-index: -1;
+      font-size: 2.5rem;
+    }
+  }
+}
