@@ -263,6 +263,22 @@ main {
   height: 26rem;
   box-shadow: 8px 8px 10px #ddd;
 }
+.restaurant__card--new {
+  position: relative;
+}
+.restaurant__card--new::after {
+  content: "Nouveau";
+  position: absolute;
+  z-index: 2;
+  right: 0rem;
+  top: 0rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 8rem;
+  height: 2.5rem;
+}
 .restaurant__img {
   height: 70%;
   width: 100%;

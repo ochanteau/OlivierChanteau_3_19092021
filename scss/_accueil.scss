@@ -197,6 +197,22 @@ main {
     border-radius: 2rem;
     height: 26rem;
     box-shadow: $shadow;
+    &--new {
+      position: relative;
+      &::after {
+        content: "Nouveau";
+        position: absolute;
+        z-index: 2;
+        right: 0rem;
+        top: 0rem;
+        background-color: $tertiary;
+        color: darken($tertiary, 40%);
+        font-weight: bold;
+        font-size: 1.4rem;
+        width: 8rem;
+        height: 2.5rem;
+      }
+    }
   }
   &__img {
     height: 70%;
