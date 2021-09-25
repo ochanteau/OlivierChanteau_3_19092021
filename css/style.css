@@ -99,7 +99,6 @@ img {
   text-align: center;
   justify-content: center;
   animation: load forwards 3s;
-  animation-delay: 100ms;
   color: #9356dc;
 }
 .loader__loading {
