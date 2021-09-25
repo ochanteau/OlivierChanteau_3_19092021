@@ -183,10 +183,16 @@ main {
 // restaurant
 
 .restaurant {
+  &__h2 {
+    margin: 0rem 1.5rem;
+  }
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1rem;
+  row-gap: 2rem;
+  background-color: $proposition;
+  padding: 5rem 0rem;
   &__card {
+    background-color: white;
     margin: 0 2rem;
     border-radius: 2rem;
     height: 26rem;
@@ -209,7 +215,6 @@ main {
     line-height: 2.5rem;
   }
   &__heart {
-    // z-index: -2;
     background-color: white;
     position: relative;
     padding: 0 1rem;
@@ -224,7 +229,7 @@ main {
       font-size: 2.5rem;
     }
     &--two {
-      background: -webkit-linear-gradient(top, #ff79da 30%, #9356dc 70%);
+      background: -webkit-linear-gradient(top, #9356dc 30%, #ff79da 70%);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;

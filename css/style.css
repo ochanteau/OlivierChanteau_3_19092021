@@ -249,9 +249,15 @@ main {
 .restaurant {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1rem;
+  row-gap: 2rem;
+  background-color: #f2f2f2;
+  padding: 5rem 0rem;
+}
+.restaurant__h2 {
+  margin: 0rem 1.5rem;
 }
 .restaurant__card {
+  background-color: white;
   margin: 0 2rem;
   border-radius: 2rem;
   height: 26rem;
@@ -289,7 +295,7 @@ main {
   font-size: 2.5rem;
 }
 .restaurant__heart--two {
-  background: -webkit-linear-gradient(top, #ff79da 30%, #9356dc 70%);
+  background: -webkit-linear-gradient(top, #9356dc 30%, #ff79da 70%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
