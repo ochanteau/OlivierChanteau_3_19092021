@@ -203,14 +203,16 @@ main {
         content: "Nouveau";
         position: absolute;
         z-index: 2;
-        right: 0rem;
-        top: 0rem;
+        right: 1.5rem;
+        top: 1.8rem;
         background-color: $tertiary;
         color: darken($tertiary, 40%);
         font-weight: bold;
         font-size: 1.4rem;
         width: 8rem;
         height: 2.5rem;
+        text-align: center;
+        padding-top: 0.6rem;
       }
     }
   }
