@@ -163,6 +163,7 @@ main {
     }
     &:hover {
       background-color: $primary-verylight;
+      box-shadow: 8px 8px 10px darken($border, 10%);
     }
     &:hover i {
       color: $primary;

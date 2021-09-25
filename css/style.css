@@ -233,6 +233,7 @@ main {
 }
 .process__step:hover {
   background-color: #f2eafb;
+  box-shadow: 8px 8px 10px #c4c4c4;
 }
 .process__step:hover i {
   color: #9356dc;
