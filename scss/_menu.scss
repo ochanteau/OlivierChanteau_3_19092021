@@ -14,3 +14,48 @@
     padding: 0;
   }
 }
+
+// main
+
+// titre du restaurant
+
+.title {
+  background-color: $proposition;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  bottom: 4rem;
+  &__h2 {
+    font-family: $title;
+    flex: 1;
+  }
+  &__heart {
+    background-color: $proposition;
+    position: relative;
+    padding: 0 1rem;
+    &:hover .title__heart--one {
+      animation: heart1 forwards 100ms 1;
+      animation-delay: 250ms;
+    }
+    &:hover .title__heart--two {
+      animation: heart2 forwards 300ms 1;
+    }
+    &--one {
+      font-size: 2.5rem;
+    }
+    &--two {
+      background: -webkit-linear-gradient(top, #9356dc 30%, #ff79da 70%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 2rem;
+      position: absolute;
+      left: 1rem;
+      z-index: -1;
+      font-size: 2.5rem;
+    }
+  }
+}
