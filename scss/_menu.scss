@@ -1,0 +1,16 @@
+// header
+.header--menu {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  i {
+    // padding: 1rem;
+    font-size: 2rem;
+    // padding-left: 2rem;
+  }
+  &--h1 {
+    flex: 1;
+    padding: 0;
+  }
+}

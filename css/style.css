@@ -345,4 +345,17 @@ main {
   color: white;
 }
 
+.header--menu {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.header--menu i {
+  font-size: 2rem;
+}
+.header--menu--h1 {
+  flex: 1;
+  padding: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
