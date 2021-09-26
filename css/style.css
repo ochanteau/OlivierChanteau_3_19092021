@@ -290,11 +290,11 @@ main {
   margin: 1rem 1rem;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   align-items: center;
 }
 .restaurant__text {
   line-height: 2.5rem;
+  flex: 1;
 }
 .restaurant__heart {
   background-color: white;
