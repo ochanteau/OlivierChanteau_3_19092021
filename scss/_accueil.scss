@@ -200,7 +200,7 @@ main {
       &::after {
         content: "Nouveau";
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         right: 1.5rem;
         top: 1.8rem;
         background-color: $tertiary;
