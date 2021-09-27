@@ -88,7 +88,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: $proposition;
-  padding: 2rem 0rem;
+  padding: 2rem 0;
 
   &__h2 {
     text-align: center;
@@ -129,15 +129,20 @@ main {
 // process
 
 .process {
-  margin: 5rem 0;
+  background-color: white;
+  padding: 5rem 0;
   &__h2 {
-    margin: 2rem 1.5rem;
+    margin: 0rem 1.5rem;
   }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     counter-reset: step;
+    @include L {
+      display: flex;
+      flex-direction: row;
+    }
   }
   &__step {
     display: flex;
@@ -183,14 +188,21 @@ main {
 // restaurant
 
 .restaurant {
-  &__h2 {
-    margin: 0rem 1.5rem;
-  }
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
   background-color: $proposition;
   padding: 5rem 0rem;
+  @include M {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__h2 {
+    margin: 0rem 1.5rem;
+    @include M {
+      grid-column: 1/3;
+    }
+  }
   &__card {
     background-color: white;
     margin: 0 2rem;
