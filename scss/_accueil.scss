@@ -51,7 +51,7 @@ header {
 
 // MAIN
 main {
-  z-index: 1;
+  // z-index: 1;
 }
 
 // Localisation
@@ -104,26 +104,6 @@ main {
   &__button {
     @include button;
     width: 22rem;
-    // margin: 3rem;
-    // width: 22rem;
-    // height: 5rem;
-    // font-size: 1.6rem;
-    // text-align: center;
-    // padding: 1.5rem;
-    // color: white;
-    // border-radius: 2rem;
-    // border: none;
-    // background: linear-gradient(to bottom right, $secondary, $primary);
-    // box-shadow: 5px 5px 10px $hint;
-
-    // &:hover {
-    //   box-shadow: 5px 5px 8px darken($hint, 10%);
-    //   background: linear-gradient(
-    //     to bottom right,
-    //     $secondary-light,
-    //     $primary-light
-    //   );
-    // }
   }
 }
 
@@ -132,14 +112,19 @@ main {
 .process {
   background-color: white;
   padding: 5rem 0;
+  // max-width: 1200px;
+  // display: flex;
+  // flex-direction: column;
+
+  justify-content: center;
   &__h2 {
-    margin: 0rem 1.5rem;
-    // @include desktop {
-    //   margin: 0 19rem 1rem 20rem;
-    // }
-    // @include XL {
-    //   margin: 0rem 20rem 1rem 27rem;
-    // }
+    margin: 0rem 1.5rem 1rem 1.5rem;
+    @include desktop {
+      // margin: 0 19.5rem 1rem 19.5rem;
+    }
+    @include XL {
+      // margin: 0rem 31.5rem 1rem 31.5rem;
+    }
   }
   &__container {
     display: flex;
@@ -147,28 +132,28 @@ main {
     align-items: center;
     counter-reset: step;
     padding: 0 2rem;
-    // @include L {
-    //   // margin: auto;
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: center;
-    // }
+    @include L {
+      // margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
   &__step {
     display: flex;
     flex-flow: row nowrap;
     background-color: $proposition;
-    // width: 33rem;
+
     width: 100%;
-    max-width: 1200px;
+    max-width: 33rem;
     height: 7rem;
     border-radius: 2rem;
     align-items: center;
-    margin: 1rem 0rem;
+    margin: 1rem 0rem 1rem 1rem;
     padding-right: 1.5rem;
-    // @include L {
-    //   margin: 2rem;
-    // }
+    @include L {
+      margin: 2rem;
+    }
     box-shadow: $shadow;
     &::before {
       counter-increment: step;
@@ -209,21 +194,23 @@ main {
   row-gap: 2rem;
   background-color: $proposition;
   padding: 5rem 0rem;
-  // @include M {
-  //   grid-template-columns: 1fr 1fr;
-  // }
-  // @include desktop {
-  //   margin: 0 18rem;
-  // }
-  // @include XL {
-  //   margin: 0 25rem;
-  // }
+  max-width: 1200px;
+  margin: auto;
+  @include M {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop {
+    // margin: 0 18rem;
+  }
+  @include XL {
+    // margin: 0 30rem;
+  }
 
   &__h2 {
     margin: 0rem 1.5rem;
-    // @include M {
-    //   grid-column: 1/3;
-    // }
+    @include M {
+      grid-column: 1/3;
+    }
   }
   &__card {
     background-color: white;
@@ -260,7 +247,7 @@ main {
     margin: 1rem 1rem;
     display: flex;
     flex-flow: row nowrap;
-    // justify-content: space-between;
+
     align-items: center;
   }
   &__text {
@@ -301,12 +288,12 @@ main {
 .footer {
   background-color: $footer;
   padding: 2rem;
-  // @include M {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   text-align: center;
-  // }
+  @include M {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   &__h3 {
     font-family: $title;

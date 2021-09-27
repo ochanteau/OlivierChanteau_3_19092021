@@ -11,19 +11,19 @@
 // }
 
 @mixin M {
-  @media (min-width: 600px) and (max-width: 999px) {
+  @media (min-width: 500px) {
     @content;
   }
 }
 
 @mixin L {
-  @media (min-width: 1000px) and (max-width: 1299px) {
+  @media (min-width: 950px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1300px) and (max-width: 1599px) {
+  @media (min-width: 1300px) {
     @content;
   }
 }
