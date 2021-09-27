@@ -133,6 +133,9 @@ main {
   padding: 5rem 0;
   &__h2 {
     margin: 0rem 1.5rem;
+    @include desktop {
+      margin: 0 19rem 1rem 20rem;
+    }
   }
   &__container {
     display: flex;
@@ -140,8 +143,10 @@ main {
     align-items: center;
     counter-reset: step;
     @include L {
+      // margin: auto;
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
   }
   &__step {
@@ -153,6 +158,9 @@ main {
     border-radius: 2rem;
     align-items: center;
     margin: 1rem 0;
+    @include L {
+      margin: 2rem;
+    }
     box-shadow: $shadow;
     &::before {
       counter-increment: step;
@@ -195,6 +203,9 @@ main {
   padding: 5rem 0rem;
   @include M {
     grid-template-columns: 1fr 1fr;
+  }
+  @include desktop {
+    margin: 0 18rem;
   }
 
   &__h2 {
@@ -279,6 +290,12 @@ main {
 .footer {
   background-color: $footer;
   padding: 2rem;
+  @include M {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   &__h3 {
     font-family: $title;

@@ -102,10 +102,6 @@ img {
     transform: translateY(0px);
   }
 }
-/* Landscape phones and down */
-/* Landscape phone to portrait tablet */
-/* Portrait tablet to landscape and desktop */
-/* Large desktop */
 .loader {
   position: fixed;
   top: 0;
@@ -224,16 +220,22 @@ main {
 .process__h2 {
   margin: 0rem 1.5rem;
 }
+@media (min-width: 1300px) {
+  .process__h2 {
+    margin: 0 19rem 1rem 20rem;
+  }
+}
 .process__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   counter-reset: step;
 }
-@media (min-width: 1000xp) {
+@media (min-width: 1000px) {
   .process__container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 }
 .process__step {
@@ -246,6 +248,11 @@ main {
   align-items: center;
   margin: 1rem 0;
   box-shadow: 8px 8px 10px #ddd;
+}
+@media (min-width: 1000px) {
+  .process__step {
+    margin: 2rem;
+  }
 }
 .process__step::before {
   counter-increment: step;
@@ -284,6 +291,11 @@ main {
 @media (min-width: 600px) {
   .restaurant {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1300px) {
+  .restaurant {
+    margin: 0 18rem;
   }
 }
 .restaurant__h2 {
@@ -365,6 +377,14 @@ main {
 .footer {
   background-color: #353434;
   padding: 2rem;
+}
+@media (min-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .footer__h3 {
   font-family: "Shrikhand", sans-serif;
@@ -574,10 +594,5 @@ main {
   box-shadow: 5px 5px 8px gray;
   background: linear-gradient(to bottom right, #ff88de, #9b63df);
 }
-
-/* Landscape phones and down */
-/* Landscape phone to portrait tablet */
-/* Portrait tablet to landscape and desktop */
-/* Large desktop */
 
 /*# sourceMappingURL=style.css.map */
