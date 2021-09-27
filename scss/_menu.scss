@@ -197,3 +197,16 @@ main {
     font-size: 1.8rem;
   }
 }
+
+// order
+
+.order {
+  display: flex;
+  justify-content: center;
+  &__button {
+    @include button;
+    width: 22rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+}
