@@ -17,19 +17,26 @@
 
 // main
 
+main {
+  background-color: $proposition;
+}
+
 // titre du restaurant
 
 .title {
+  // z-index: 2;
   background-color: $proposition;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 2rem 1.5rem;
+  // margin-top: -4rem;
+  padding: 4rem 2rem 0rem 2rem;
   border-radius: 3rem 3rem 0 0;
   position: relative;
   bottom: 4rem;
   &__h2 {
     font-family: $title;
+    font-size: 3rem;
     flex: 1;
   }
   &__heart {
@@ -63,13 +70,32 @@
 // ENTREE
 
 .menu {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 2rem;
+  &__container {
+    // display: grid;
+    // grid-template-columns: auto;
+    // row-gap: 2rem;
+  }
+  &__h3 {
+    font-weight: normal;
+    margin: 0rem 2rem 2rem 2rem;
+    position: relative;
+    &::after {
+      content: "";
+      width: 5rem;
+      border-bottom: 3px solid $tertiary;
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 2.7rem;
+    }
+  }
   &__item {
-    border: solid 1px black;
+    background-color: white;
+    // border: solid 1px black;
     display: flex;
     flex-flow: row nowrap;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
     // width: 20rem;
 
     overflow: hidden;
@@ -121,7 +147,7 @@
   }
 
   &__item:hover .menu__confirm {
-    width: 6rem;
+    width: 5.5rem;
     /* background-color: #99e2d0; */
     /* display: flow-root; */
     transform: translate(-48px, 0);
@@ -147,7 +173,7 @@
   &__meal {
     padding-bottom: 0.5rem;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   //   &__text {

@@ -358,18 +358,23 @@ main {
   padding: 0;
 }
 
+main {
+  background-color: #f2f2f2;
+}
+
 .title {
   background-color: #f2f2f2;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 2rem 1.5rem;
+  padding: 4rem 2rem 0rem 2rem;
   border-radius: 3rem 3rem 0 0;
   position: relative;
   bottom: 4rem;
 }
 .title__h2 {
   font-family: "Shrikhand", sans-serif;
+  font-size: 3rem;
   flex: 1;
 }
 .title__heart {
@@ -399,15 +404,26 @@ main {
   font-size: 2.5rem;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 2rem;
+.menu__h3 {
+  font-weight: normal;
+  margin: 0rem 2rem 2rem 2rem;
+  position: relative;
+}
+.menu__h3::after {
+  content: "";
+  width: 5rem;
+  border-bottom: 3px solid #99e2d0;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 2.7rem;
 }
 .menu__item {
-  border: solid 1px black;
+  background-color: white;
   display: flex;
   flex-flow: row nowrap;
+  margin: 1.5rem;
+  border-radius: 1.5rem;
   overflow: hidden;
 }
 .menu__description {
@@ -451,7 +467,7 @@ main {
   left: 48px;
 }
 .menu__item:hover .menu__confirm {
-  width: 6rem;
+  width: 5.5rem;
   /* background-color: #99e2d0; */
   /* display: flow-root; */
   transform: translate(-48px, 0);
@@ -474,7 +490,7 @@ main {
 .menu__meal {
   padding-bottom: 0.5rem;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
