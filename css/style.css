@@ -91,15 +91,11 @@ img {
   }
   25% {
     transform: translateY(10px);
-    opacity: 0.25;
+    opacity: 0.35;
   }
   50% {
     transform: translateY(5px);
-    opacity: 0.5;
-  }
-  75% {
-    transform: translateY(0px);
-    opacity: 0.75;
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -494,7 +490,7 @@ main {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__prix {
+.menu__price {
   /* align-items: center; */
   padding: 1rem 1em;
   display: flex;
