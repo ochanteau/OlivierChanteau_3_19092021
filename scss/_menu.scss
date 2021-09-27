@@ -205,8 +205,8 @@ main {
   justify-content: center;
   &__button {
     @include button;
-    width: 22rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+    width: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
   }
 }
