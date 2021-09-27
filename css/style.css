@@ -213,10 +213,12 @@ header h1 {
 .process {
   background-color: white;
   padding: 5rem 0;
-  justify-content: center;
 }
 .process__h2 {
   margin: 0rem 1.5rem 1rem 1.5rem;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: auto;
 }
 .process__container {
   display: flex;
@@ -224,8 +226,10 @@ header h1 {
   align-items: center;
   counter-reset: step;
   padding: 0 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
   .process__container {
     display: flex;
     flex-direction: row;
@@ -245,7 +249,7 @@ header h1 {
   padding-right: 1.5rem;
   box-shadow: 8px 8px 10px #ddd;
 }
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
   .process__step {
     margin: 2rem;
   }
