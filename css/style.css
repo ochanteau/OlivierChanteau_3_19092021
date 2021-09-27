@@ -84,6 +84,28 @@ img {
     opacity: 0;
   }
 }
+@keyframes move {
+  0% {
+    transform: translateY(15px);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(10px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(0px);
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .loader {
   position: fixed;
   top: 0;
@@ -374,7 +396,7 @@ main {
 }
 .title__h2 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 3rem;
+  font-size: 2.7rem;
   flex: 1;
 }
 .title__heart {
@@ -404,6 +426,9 @@ main {
   font-size: 2.5rem;
 }
 
+.menu__name {
+  padding-bottom: 2rem;
+}
 .menu__h3 {
   font-weight: normal;
   margin: 0rem 2rem 2rem 2rem;
@@ -411,7 +436,7 @@ main {
 }
 .menu__h3::after {
   content: "";
-  width: 5rem;
+  width: 4.5rem;
   border-bottom: 3px solid #99e2d0;
   z-index: 2;
   position: absolute;
@@ -425,6 +450,34 @@ main {
   margin: 1.5rem;
   border-radius: 1.5rem;
   overflow: hidden;
+  box-shadow: 2px 2px 4px #ddd;
+  animation: move 1000ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.menu__item--2 {
+  animation: move 1000ms;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.menu__item--3 {
+  animation: move 1000ms;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.menu__item:hover .menu__confirm {
+  width: 5.5rem;
+  /* background-color: #99e2d0; */
+  /* display: flow-root; */
+  transform: translate(-48px, 0);
+  /* transition-delay: 300ms, 400ms; */
+}
+.menu__item:hover .menu__icone {
+  transform: rotate(360deg);
+  transition-property: all;
+  transition-duration: 600ms;
 }
 .menu__description {
   padding: 1rem 0rem 1rem 1rem;
@@ -466,13 +519,6 @@ main {
   position: relative;
   left: 48px;
 }
-.menu__item:hover .menu__confirm {
-  width: 5.5rem;
-  /* background-color: #99e2d0; */
-  /* display: flow-root; */
-  transform: translate(-48px, 0);
-  /* transition-delay: 300ms, 400ms; */
-}
 .menu__icone {
   color: #99e2d0;
   font-size: 1.5rem;
@@ -481,11 +527,6 @@ main {
   background-color: white;
   transform: rotate(0);
   transition-timing-function: ease-in-out;
-}
-.menu__item:hover .menu__icone {
-  transform: rotate(360deg);
-  transition-property: all;
-  transition-duration: 600ms;
 }
 .menu__meal {
   padding-bottom: 0.5rem;

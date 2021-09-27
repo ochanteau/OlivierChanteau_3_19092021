@@ -36,7 +36,7 @@ main {
   bottom: 4rem;
   &__h2 {
     font-family: $title;
-    font-size: 3rem;
+    font-size: 2.7rem;
     flex: 1;
   }
   &__heart {
@@ -75,13 +75,17 @@ main {
     // grid-template-columns: auto;
     // row-gap: 2rem;
   }
+  &__name {
+    padding-bottom: 2rem;
+  }
+
   &__h3 {
     font-weight: normal;
     margin: 0rem 2rem 2rem 2rem;
     position: relative;
     &::after {
       content: "";
-      width: 5rem;
+      width: 4.5rem;
       border-bottom: 3px solid $tertiary;
       z-index: 2;
       position: absolute;
@@ -97,8 +101,39 @@ main {
     margin: 1.5rem;
     border-radius: 1.5rem;
     // width: 20rem;
-
     overflow: hidden;
+    box-shadow: $shadow--menu;
+    animation: move 1000ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    &--2 {
+      // margin: 1rem 0rem;
+      animation: move 1000ms;
+      animation-delay: 400ms;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+    &--3 {
+      // margin: 1rem 0rem;
+      animation: move 1000ms;
+      animation-delay: 600ms;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    &:hover .menu__confirm {
+      width: 5.5rem;
+      /* background-color: #99e2d0; */
+      /* display: flow-root; */
+      transform: translate(-48px, 0);
+
+      /* transition-delay: 300ms, 400ms; */
+    }
+    &:hover .menu__icone {
+      transform: rotate(360deg);
+      transition-property: all;
+      transition-duration: 600ms;
+    }
   }
 
   &__description {
@@ -146,15 +181,6 @@ main {
     left: 48px;
   }
 
-  &__item:hover .menu__confirm {
-    width: 5.5rem;
-    /* background-color: #99e2d0; */
-    /* display: flow-root; */
-    transform: translate(-48px, 0);
-
-    /* transition-delay: 300ms, 400ms; */
-  }
-
   &__icone {
     color: #99e2d0;
     font-size: 1.5rem;
@@ -165,24 +191,9 @@ main {
     transition-timing-function: ease-in-out;
   }
 
-  &__item:hover .menu__icone {
-    transform: rotate(360deg);
-    transition-property: all;
-    transition-duration: 600ms;
-  }
   &__meal {
     padding-bottom: 0.5rem;
     font-weight: bold;
     font-size: 1.8rem;
   }
-
-  //   &__text {
-  //     padding: 0.5rem;
-  //   }
 }
-
-//   h4,
-//   p {
-//     margin: 0;
-//     padding: 0.2rem;
-//   }
