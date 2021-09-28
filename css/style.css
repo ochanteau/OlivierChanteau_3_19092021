@@ -415,7 +415,16 @@ header h1 {
 }
 
 main {
-  background-color: #f2f2f2;
+  background-color: white;
+}
+
+@media (min-width: 525px) {
+  .cover__img {
+    height: 100%;
+    width: 100%;
+    max-height: 45rem;
+    object-fit: cover;
+  }
 }
 
 .title {
@@ -423,10 +432,18 @@ main {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 4rem 2rem 0rem 2rem;
-  border-radius: 3rem 3rem 0 0;
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 4rem 4rem 0 0;
   position: relative;
-  bottom: 4rem;
+  margin-top: -5rem;
+  width: 100%;
+}
+@media (min-width: 525px) {
+  .title {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: -5rem;
+  }
 }
 .title__h2 {
   font-family: "Shrikhand", sans-serif;
@@ -460,6 +477,15 @@ main {
   font-size: 2.5rem;
 }
 
+.menu {
+  background-color: #f2f2f2;
+}
+@media (min-width: 525px) {
+  .menu {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
 .menu__type {
   padding-bottom: 2rem;
 }
@@ -503,10 +529,7 @@ main {
 }
 .menu__item:hover .menu__confirm {
   width: 5.5rem;
-  /* background-color: #99e2d0; */
-  /* display: flow-root; */
   transform: translate(-48px, 0);
-  /* transition-delay: 300ms, 400ms; */
 }
 .menu__item:hover .menu__icone {
   transform: rotate(360deg);
@@ -516,20 +539,14 @@ main {
 .menu__description {
   padding: 1rem 0rem 1rem 1rem;
   flex: 1;
-  /* text-overflow: ellipsis; */
   overflow: hidden;
-  /* white-space: nowrap; */
 }
 .menu__description p {
-  /* text-overflow: fade(2px) ellipsis;
-  overflow: hidden;
-  white-space: nowrap; */
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .menu__price {
-  /* align-items: center; */
   padding: 1rem 1em;
   display: flex;
   justify-content: flex-end;
@@ -542,11 +559,7 @@ main {
   text-align: center;
   width: 0%;
   justify-content: center;
-  /* width: 15%; */
-  /* display: flex;
-  flex-direction: column; */
   transform: translate(0);
-  /* display: none; */
   transition-timing-function: ease-in-out;
   transition-property: all;
   transition-duration: 500ms;
@@ -569,8 +582,15 @@ main {
 }
 
 .order {
+  background-color: #f2f2f2;
   display: flex;
   justify-content: center;
+}
+@media (min-width: 525px) {
+  .order {
+    max-width: 1000px;
+    margin: auto;
+  }
 }
 .order__button {
   margin: 3rem;

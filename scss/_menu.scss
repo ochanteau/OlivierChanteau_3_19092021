@@ -5,9 +5,7 @@
   padding: 1rem 2rem;
 
   i {
-    // padding: 1rem;
     font-size: 2rem;
-    // padding-left: 2rem;
   }
   &--h1 {
     flex: 1;
@@ -18,22 +16,40 @@
 // main
 
 main {
-  background-color: $proposition;
+  background-color: white;
+}
+
+//cover picture
+
+.cover {
+  &__img {
+    @include M {
+      height: 100%;
+      width: 100%;
+      max-height: 45rem;
+      object-fit: cover;
+    }
+  }
 }
 
 // titre du restaurant
 
 .title {
-  // z-index: 2;
+  @include M {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: -5rem;
+  }
   background-color: $proposition;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  // margin-top: -4rem;
-  padding: 4rem 2rem 0rem 2rem;
-  border-radius: 3rem 3rem 0 0;
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 4rem 4rem 0 0;
   position: relative;
-  bottom: 4rem;
+  margin-top: -5rem;
+  width: 100%;
+
   &__h2 {
     font-family: $title;
     font-size: 2.7rem;
@@ -70,11 +86,12 @@ main {
 // ENTREE
 
 .menu {
-  &__container {
-    // display: grid;
-    // grid-template-columns: auto;
-    // row-gap: 2rem;
+  background-color: $proposition;
+  @include M {
+    max-width: 1000px;
+    margin: auto;
   }
+
   &__type {
     padding-bottom: 2rem;
   }
@@ -95,26 +112,24 @@ main {
   }
   &__item {
     background-color: white;
-    // border: solid 1px black;
+
     display: flex;
     flex-flow: row nowrap;
     margin: 1.5rem;
     border-radius: 1.5rem;
-    // width: 20rem;
+
     overflow: hidden;
     box-shadow: $shadow--menu;
     animation: move 1000ms;
     animation-fill-mode: forwards;
     opacity: 0;
     &--2 {
-      // margin: 1rem 0rem;
       animation: move 1000ms;
       animation-delay: 400ms;
       animation-fill-mode: forwards;
       opacity: 0;
     }
     &--3 {
-      // margin: 1rem 0rem;
       animation: move 1000ms;
       animation-delay: 600ms;
       animation-fill-mode: forwards;
@@ -123,11 +138,7 @@ main {
 
     &:hover .menu__confirm {
       width: 5.5rem;
-      /* background-color: #99e2d0; */
-      /* display: flow-root; */
       transform: translate(-48px, 0);
-
-      /* transition-delay: 300ms, 400ms; */
     }
     &:hover .menu__icone {
       transform: rotate(360deg);
@@ -139,22 +150,16 @@ main {
   &__description {
     padding: 1rem 0rem 1rem 1rem;
     flex: 1;
-    /* text-overflow: ellipsis; */
 
     overflow: hidden;
-    /* white-space: nowrap; */
   }
   &__description p {
-    /* text-overflow: fade(2px) ellipsis;
-    overflow: hidden;
-    white-space: nowrap; */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
 
   &__price {
-    /* align-items: center; */
     padding: 1rem 1em;
     display: flex;
     justify-content: flex-end;
@@ -166,14 +171,9 @@ main {
     background-color: #99e2d0;
     padding: 2.2rem 0rem;
     text-align: center;
-
     width: 0%;
     justify-content: center;
-    /* width: 15%; */
-    /* display: flex;
-    flex-direction: column; */
     transform: translate(0);
-    /* display: none; */
     transition-timing-function: ease-in-out;
     transition-property: all;
     transition-duration: 500ms;
@@ -201,6 +201,11 @@ main {
 // order
 
 .order {
+  @include M {
+    max-width: 1000px;
+    margin: auto;
+  }
+  background-color: $proposition;
   display: flex;
   justify-content: center;
   &__button {
