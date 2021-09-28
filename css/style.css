@@ -418,12 +418,21 @@ main {
   background-color: white;
 }
 
+.cover__img {
+  max-height: 25rem;
+  width: 100%;
+  object-fit: cover;
+}
 @media (min-width: 525px) {
   .cover__img {
-    height: 100%;
     width: 100%;
-    max-height: 45rem;
+    max-height: 35rem;
     object-fit: cover;
+  }
+}
+@media (min-width: 1000px) {
+  .cover__img {
+    max-height: 45rem;
   }
 }
 
@@ -524,6 +533,12 @@ main {
 .menu__item--3 {
   animation: move 1000ms;
   animation-delay: 600ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.menu__item--4 {
+  animation: move 1000ms;
+  animation-delay: 800ms;
   animation-fill-mode: forwards;
   opacity: 0;
 }
