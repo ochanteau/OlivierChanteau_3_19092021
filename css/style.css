@@ -151,6 +151,10 @@ header h1 {
   padding: 1rem;
 }
 
+.main {
+  background: #f2f2f2;
+}
+
 .localisation {
   display: flex;
   flex-flow: row nowrap;
