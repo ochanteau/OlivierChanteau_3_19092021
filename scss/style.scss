@@ -1,8 +1,7 @@
-@import "variables";
-@import "base";
-@import "animations";
-@import "utils";
-@import "media_queries";
-@import "accueil";
-@import "menu";
-@import "media_queries";
+@import "./utils/variables";
+@import "./Base/base";
+@import "./utils/animations";
+@import "./components/buttons";
+@import "./utils/media_queries";
+@import "./pages/accueil";
+@import "./pages/menu";
