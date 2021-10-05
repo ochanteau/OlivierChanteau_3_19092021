@@ -36,11 +36,6 @@ img {
     width: 1em;
   }
 }
-@-webkit-keyframes ellipsis {
-  to {
-    width: 1em;
-  }
-}
 @keyframes load {
   0% {
     z-index: 2;
